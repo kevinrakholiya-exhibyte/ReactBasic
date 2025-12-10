@@ -6,6 +6,7 @@ import AboutUs from './Pages/AboutUs'
 import Navbar from './Pages/Navbar'
 import CounterClass from './Component/CounterClass'
 import CounterFunction from './Component/CounterFunction'
+import LoginPage from './Pages/LoginPage'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Navbar />
         {/* <CounterClass /> */}
         <Routes>
+          {/* <Route path='/' element={<LoginPage />} /> */}
           <Route path='/' element={<Home />} />
           <Route path='/Product' element={<Product />} />
           <Route path='/Aboutus' element={<AboutUs />} />
