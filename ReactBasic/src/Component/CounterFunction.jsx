@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import ChildComponent from './ChildComponent';
 
 const CounterFunction = () => {
     const [count, setCount] = useState(0)
@@ -19,12 +20,15 @@ const CounterFunction = () => {
         console.log("Count updated:", count);
     }, [count])
 
-
+    const increaseCountFuncion = () => {
+        setCount(count + 1);
+    };
 
     return (
         <div style={{ padding: "20px" }}>
             <h2>Count: {count}</h2>
-            <button onClick={() => setCount(count + 1)}>Increase</button>
+            {/* <button onClick={() => setCount(count + 1)}>Increase</button> */}
+            <ChildComponent increaseCount={increaseCountFuncion} />
         </div>
     )
 }
