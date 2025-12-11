@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from '../ContextAPI/UserContext';
 
-const User = ({ name, age, uid }) => {
+const User = ({ age, uid }) => {
+    const { name } = useContext(UserContext);
     return (
         <>
             <div>
