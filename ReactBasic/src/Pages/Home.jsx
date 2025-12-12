@@ -5,6 +5,8 @@ import UseState from '../Hooks/UseState'
 import UseRef from '../Hooks/UseRef'
 import UseMemo from '../Hooks/UseMemo'
 import UserProvide from '../ContextAPI/UserProvide'
+import Wrapper from '../Component/Wrapper'
+import MenuContainer from '../Component/MenuContainer'
 
 
 const Home = () => {
@@ -18,6 +20,11 @@ const Home = () => {
             <UserProvide>
                 <User age={21} uid={101} />
             </UserProvide>
+            <Wrapper>
+                <h3>Hello World</h3>
+                <p>This is From Inside the wrapper</p>
+            </Wrapper>
+            <MenuContainer />
         </div>
 
     )
